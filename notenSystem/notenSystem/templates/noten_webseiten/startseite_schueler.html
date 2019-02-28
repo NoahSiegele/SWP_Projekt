@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <link href="{% static 'polls/style.css' %}" rel="stylesheet" type="text/css">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+
+    <!-- Bootstrap CSS -->
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" rel="stylesheet">
+
+    <title>Polls</title>
+
+    <script crossorigin="anonymous"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script crossorigin="anonymous"
+            integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script crossorigin="anonymous"
+            integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="">Navbar</a>
+    <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
+            data-target="#navbarNav" data-toggle="collapse" type="button">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'notenSystem:index' %}">Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/admin">Admin</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'notenSystem:index' %}">Log out</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="jumbotron text-center">
+    <h1>Notensystem</h1>
+    <footer class="blockquote-footer">???</footer>
+</div>
+
+{% if latest_question_list %}
+<div class="row ml-3">
+    {% for question in latest_question_list %}
+    <div class="card mr-3" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{ Klasse.subjects }}</h5>
+            <a class="btn btn-primary" href="{% url 'notenSystem:detail_schueler' Klasse.subjects %}">Open</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<p>No subjects are available.</p>
+{% endif %}
+</body>
+
+</html>
