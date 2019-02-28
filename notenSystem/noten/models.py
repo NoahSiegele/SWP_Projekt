@@ -36,7 +36,3 @@ class Noten(models.Model):
 
 
 
-
-
-
-
