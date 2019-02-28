@@ -24,7 +24,6 @@ class Klasse(models.Model):
 class Subject(models.Model):
     noten = models.IntegerField(default=0)
     Klasse = models.ForeignKey(Klasse, on_delete=models.CASCADE)
-    teacher = models.CharField(default="", max_length=150)
     Teacher = models.ForeignKey(Teacher, on_delete=models.CASCADE)
     Student = models.ForeignKey(Student, on_delete=models.CASCADE)
 
