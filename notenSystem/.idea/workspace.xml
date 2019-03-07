@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e198bdae-d43c-44f1-8920-bfa4b3aabef6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/noten/templates/noten/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/noten/templates/noten_webseiten/detailseite_lehrer.html" beforeDir="false" afterPath="$PROJECT_DIR$/noten/templates/noten/detailseite_lehrer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/noten/templates/noten_webseiten/detailseite_schueler.html" beforeDir="false" afterPath="$PROJECT_DIR$/noten/templates/noten/detailseite_schueler.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/noten/templates/noten_webseiten/loginseite.html" beforeDir="false" afterPath="$PROJECT_DIR$/noten/templates/noten/loginseite.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/noten/templates/noten_webseiten/notenvergebung_lehrer.html" beforeDir="false" afterPath="$PROJECT_DIR$/noten/templates/noten/notenvergebung_lehrer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/noten/templates/noten_webseiten/startseite_lehrer.html" beforeDir="false" afterPath="$PROJECT_DIR$/noten/templates/noten/startseite_lehrer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/noten/templates/noten_webseiten/startseite_schueler.html" beforeDir="false" afterPath="$PROJECT_DIR$/noten/templates/noten/startseite_schueler.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/noten/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/noten/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notenSystem/templates/noten_webseiten/detailseite_lehrer.html" beforeDir="false" afterPath="$PROJECT_DIR$/noten/templates/noten_webseiten/detailseite_lehrer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notenSystem/templates/noten_webseiten/detailseite_schueler.html" beforeDir="false" afterPath="$PROJECT_DIR$/noten/templates/noten_webseiten/detailseite_schueler.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notenSystem/templates/noten_webseiten/loginseite.html" beforeDir="false" afterPath="$PROJECT_DIR$/noten/templates/noten_webseiten/loginseite.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notenSystem/templates/noten_webseiten/notenvergebung_lehrer.html" beforeDir="false" afterPath="$PROJECT_DIR$/noten/templates/noten_webseiten/notenvergebung_lehrer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notenSystem/templates/noten_webseiten/startseite_lehrer.html" beforeDir="false" afterPath="$PROJECT_DIR$/noten/templates/noten_webseiten/startseite_lehrer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notenSystem/templates/noten_webseiten/startseite_schueler.html" beforeDir="false" afterPath="$PROJECT_DIR$/noten/templates/noten_webseiten/startseite_schueler.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,11 +42,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="html" value="130" />
           <entry key="py" value="719" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+          <entry key="HTML" value="130" />
           <entry key="Python" value="719" />
         </counts>
       </usages-collector>
@@ -56,8 +59,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/noten/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-157">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="219">
+              <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
               <folding>
                 <marker date="1551943624617" expanded="true" signature="742:999" ph="..." />
                 <marker date="1551943624617" expanded="true" signature="1024:1135" ph="..." />
@@ -71,8 +74,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/notenSystem/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+            <state relative-caret-position="285">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
               <folding>
                 <element signature="e#635#667#0" expanded="true" />
               </folding>
@@ -89,11 +92,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/noten/templates/noten_webseiten/startseite_lehrer.html">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/noten/templates/noten/startseite_lehrer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="60" column="58" lean-forward="true" selection-start-line="60" selection-start-column="58" selection-end-line="60" selection-end-column="58" />
+            <state relative-caret-position="261">
+              <caret line="56" column="46" lean-forward="true" selection-start-line="56" selection-start-column="46" selection-end-line="56" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -101,8 +104,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/noten/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
+            <state relative-caret-position="165">
+              <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
               </folding>
@@ -111,7 +114,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/noten/templates/noten_webseiten/detailseite_schueler.html">
+        <entry file="file://$PROJECT_DIR$/noten/templates/noten/detailseite_schueler.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-112">
               <caret line="46" column="55" lean-forward="true" selection-start-line="46" selection-start-column="55" selection-end-line="46" selection-end-column="55" />
@@ -119,17 +122,17 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/noten/templates/noten_webseiten/detailseite_lehrer.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/noten/templates/noten/detailseite_lehrer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="43">
-              <caret line="41" column="55" selection-start-line="41" selection-start-column="55" selection-end-line="41" selection-end-column="55" />
+            <state relative-caret-position="765">
+              <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/noten/templates/noten_webseiten/notenvergebung_lehrer.html">
+        <entry file="file://$PROJECT_DIR$/noten/templates/noten/notenvergebung_lehrer.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-127">
               <caret line="43" column="55" selection-start-line="43" selection-start-column="55" selection-end-line="43" selection-end-column="55" />
@@ -138,20 +141,27 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/noten/templates/noten_webseiten/loginseite.html">
+        <entry file="file://$PROJECT_DIR$/noten/templates/noten/loginseite.html">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/noten/templates/noten_webseiten/startseite_schueler.html">
+        <entry file="file://$PROJECT_DIR$/noten/templates/noten/startseite_schueler.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="63" column="58" selection-start-line="63" selection-start-column="58" selection-end-line="63" selection-end-column="58" />
+            <state relative-caret-position="193">
+              <caret line="38" column="17" lean-forward="true" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -161,13 +171,14 @@
       <list>
         <option value="$PROJECT_DIR$/notenSystem/settings.py" />
         <option value="$PROJECT_DIR$/noten/models.py" />
-        <option value="$PROJECT_DIR$/noten/views.py" />
         <option value="$PROJECT_DIR$/notenSystem/urls.py" />
-        <option value="$PROJECT_DIR$/noten/templates/noten_webseiten/startseite_lehrer.html" />
-        <option value="$PROJECT_DIR$/noten/templates/noten_webseiten/startseite_schueler.html" />
         <option value="$PROJECT_DIR$/noten/templates/noten_webseiten/notenvergebung_lehrer.html" />
         <option value="$PROJECT_DIR$/noten/templates/noten_webseiten/detailseite_schueler.html" />
         <option value="$PROJECT_DIR$/noten/templates/noten_webseiten/detailseite_lehrer.html" />
+        <option value="$PROJECT_DIR$/noten/templates/noten_webseiten/startseite_lehrer.html" />
+        <option value="$PROJECT_DIR$/noten/templates/noten_webseiten/startseite_schueler.html" />
+        <option value="$PROJECT_DIR$/noten/views.py" />
+        <option value="$PROJECT_DIR$/noten/templates/noten/startseite_lehrer.html" />
       </list>
     </option>
   </component>
@@ -212,7 +223,7 @@
               <item name="notenSystem" type="462c0819:PsiDirectoryNode" />
               <item name="noten" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="noten_webseiten" type="462c0819:PsiDirectoryNode" />
+              <item name="noten" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="notenSystem" type="b2602c69:ProjectViewProjectNode" />
@@ -234,6 +245,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/noten/templates/noten" />
+      <recent name="$PROJECT_DIR$/noten/templates" />
       <recent name="$PROJECT_DIR$/noten" />
     </key>
   </component>
@@ -332,10 +345,68 @@
     <entry file="file://$PROJECT_DIR$/noten/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/noten/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/noten/templates/noten/notenvergebung_lehrer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-127">
+          <caret line="43" column="55" selection-start-line="43" selection-start-column="55" selection-end-line="43" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/noten/templates/noten/loginseite.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/noten/templates/noten/detailseite_schueler.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-112">
+          <caret line="46" column="55" lean-forward="true" selection-start-line="46" selection-start-column="55" selection-end-line="46" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/noten/templates/noten/detailseite_lehrer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/noten/templates/noten/startseite_schueler.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="38" column="17" lean-forward="true" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/noten/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notenSystem/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#635#667#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/noten/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-157">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="219">
+          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
           <folding>
             <marker date="1551943624617" expanded="true" signature="742:999" ph="..." />
             <marker date="1551943624617" expanded="true" signature="1024:1135" ph="..." />
@@ -345,68 +416,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/noten/apps.py">
+    <entry file="file://$PROJECT_DIR$/noten/templates/noten/startseite_lehrer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/noten/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notenSystem/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-          <folding>
-            <element signature="e#635#667#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/noten/templates/noten_webseiten/startseite_lehrer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="60" column="58" lean-forward="true" selection-start-line="60" selection-start-column="58" selection-end-line="60" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/noten/templates/noten_webseiten/startseite_schueler.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="63" column="58" selection-start-line="63" selection-start-column="58" selection-end-line="63" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/noten/templates/noten_webseiten/notenvergebung_lehrer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-127">
-          <caret line="43" column="55" selection-start-line="43" selection-start-column="55" selection-end-line="43" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/noten/templates/noten_webseiten/loginseite.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/noten/templates/noten_webseiten/detailseite_schueler.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-112">
-          <caret line="46" column="55" lean-forward="true" selection-start-line="46" selection-start-column="55" selection-end-line="46" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/noten/templates/noten_webseiten/detailseite_lehrer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="43">
-          <caret line="41" column="55" selection-start-line="41" selection-start-column="55" selection-end-line="41" selection-end-column="55" />
+        <state relative-caret-position="261">
+          <caret line="56" column="46" lean-forward="true" selection-start-line="56" selection-start-column="46" selection-end-line="56" selection-end-column="46" />
         </state>
       </provider>
     </entry>

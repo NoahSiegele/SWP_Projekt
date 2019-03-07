@@ -7,7 +7,7 @@ from django.utils import timezone
 from .models import Klasse, Student, Teacher, Subject, Note, Unterricht, Prüfung, Test
 
 class IndexView(generic.ListView):
-    template_name = 'noten_webseiten/startseite_lehrer.html'
+    template_name = 'noten/startseite_lehrer.html'
 
     def get_queryset(self):
         """Return the last five published questions."""
