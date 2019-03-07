@@ -3,7 +3,6 @@
 
 <head>
     {% load static %}
-    <link href="{% static 'polls/style.css' %}" rel="stylesheet" type="text/css">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
@@ -37,19 +36,21 @@
 
         <!-- Icon -->
         <div class="fadeIn first">
-            <img alt="HTL Logo" id="HTL Logo" src="logo.png"/>
+            <img alt="HTL Logo" id="HTL Logo" src="/notenSystem/noten/static/noten/img/logo.png"/>
         </div>
 
         <!-- Login Form -->
         <form>
-            <input class="fadeIn second" id="login" name="login" placeholder="login" type="text">
+            <input class="fadeIn second" id="username" name="username" placeholder="username" type="text">
             <input class="fadeIn third" id="password" name="login" placeholder="password" type="text">
-            <input class="fadeIn fourth" type="submit" value="Log In">
         </form>
 
         <!-- Remind Passowrd -->
         <div id="formFooter">
-            <a class="underlineHover" href="#">Forgot Password?</a>
+            <a class="underlineHover" href="#">Log in</a>
+        </div>
+        <div id="formFooter">
+            <a class="underlineHover" href="#">Sign up</a>
         </div>
 
     </div>
