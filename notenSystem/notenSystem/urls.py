@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
+from noten import views
+
+app_name = 'noten'
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('noten.urls')),
