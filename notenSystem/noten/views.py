@@ -4,7 +4,7 @@ from django.urls import reverse
 from django.views import generic
 from django.utils import timezone
 
-from .models import Klasse, Student, Teacher, Subject, Noten
+from .models import Klasse, Student, Teacher, Subject, Note, Unterricht, Prüfung, Test
 
 class IndexView(generic.ListView):
     template_name = 'noten_webseiten/startseite_lehrer.html'
