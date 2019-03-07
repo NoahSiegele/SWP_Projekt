@@ -43,18 +43,21 @@
             <li class="nav-item active">
                 <a class="nav-link" href="{% url 'notenSystem:index' %}">Log out</a>
             </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'notenSystem:index' %}">Stundenplan</a>
+            </li>
         </ul>
     </div>
 </nav>
 
 <div class="jumbotron text-center">
     <h1>Marksystem</h1>
-    <footer class="blockquote-footer">Here you can see your subjects and your marks.</footer>
+    <footer class="blockquote-footer">Here you can see your subjects, marks and your timetable.</footer>
 </div>
 
 {% if latest_question_list %}
 <div class="row ml-3">
-    {% for question in latest_question_list %}
+    {% for question in latest_question_list %}              Muss noch geändert werden.
     <div class="card mr-3" style="width: 18rem;">
         <div class="card-body">
             <h5 class="card-title">{{ Klasse.subjects }}</h5>
@@ -67,5 +70,4 @@
 <p>No subjects are available.</p>
 {% endif %}
 </body>
-
 </html>

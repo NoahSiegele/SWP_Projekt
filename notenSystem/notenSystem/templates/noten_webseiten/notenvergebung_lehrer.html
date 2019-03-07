@@ -43,22 +43,20 @@
             <li class="nav-item active">
                 <a class="nav-link" href="{% url 'notenSystem:index' %}">Log out</a>
             </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="{% url 'notenSystem:index' %}">Stundenplan</a>
-            </li>
         </ul>
     </div>
 </nav>
 
 <div class="jumbotron text-center">
     <h1>Marksystem</h1>
-    <footer class="blockquote-footer">Here you can see your subjects, marks and your timetable.</footer>
+    <footer class="blockquote-footer">Here you can enter the grades for the students.</footer>
 </div>
 
 <table class="table table-striped">
     <thead>
     <tr>
         <th scope="col">Number</th>
+        <th scope="col">Student</th>
         <th scope="col">Exam</th>
         <th scope="col">Intermediate Note</th>
     </tr>
@@ -67,12 +65,12 @@
     {% for choice in question.choice_set.all %}             Muss noch geändert werden.
     <tr>
         <th scope="row">{{forloop.counter}}</th>
-        <td>{{ Klasse.subjects }}</td>
-        <td>{{ Subject.noten }}</td>
+        <td>{{ Subject.Student }}</td>
+        <td>{{ Student.noten }}</td>                        Der Student braucht auch eine eigene Note in der Datenbank.
     </tr>
     {% endfor %}
     </tbody>
 </table>
-</body>
 
+</body>
 </html>

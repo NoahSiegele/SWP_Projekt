@@ -12,7 +12,7 @@
     <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
           integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" rel="stylesheet">
 
-    <title>Polls</title>
+    <title>Marksystem</title>
 
     <script crossorigin="anonymous"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -48,8 +48,8 @@
 </nav>
 
 <div class="jumbotron text-center">
-    <h1>Notensystem</h1>
-    <footer class="blockquote-footer">???</footer>
+    <h1>Marksystem</h1>
+    <footer class="blockquote-footer">Here you can see your classes in which you teach.</footer>
 </div>
 
 {% if latest_question_list %}
@@ -61,16 +61,10 @@
             <a class="btn btn-primary" href="{% url 'notenSystem:detail_lehrer_subjects' Klasse.subjects %}">Open</a>
         </div>
     </div>
-    <div class="card mr-3" style="width: 18rem;">
-        <div class="card-body">
-            <h5 class="card-title">Stundenplan</h5>
-            <a class="btn btn-primary" href="{% url 'notenSystem:Stundenplan' Klasse.class_name %}">Open</a>
-        </div>
-    </div>
     {% endfor %}
 </div>
 {% else %}
-<p>No subjects are available.</p>
+<p>No classes are available.</p>
 {% endif %}
 </body>
 
