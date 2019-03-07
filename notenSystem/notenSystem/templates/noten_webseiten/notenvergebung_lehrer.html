@@ -43,31 +43,34 @@
             <li class="nav-item active">
                 <a class="nav-link" href="{% url 'notenSystem:index' %}">Log out</a>
             </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="{% url 'notenSystem:index' %}">Stundenplan</a>
-            </li>
         </ul>
     </div>
 </nav>
 
 <div class="jumbotron text-center">
     <h1>Marksystem</h1>
-    <footer class="blockquote-footer">Here you can see your subjects, marks and your timetable.</footer>
+    <footer class="blockquote-footer">Here you can enter the grades for the students.</footer>
 </div>
 
-{% if latest_question_list %}
-<div class="row ml-3">
-    {% for question in latest_question_list %}              Muss noch geändert werden.
-    <div class="card mr-3" style="width: 18rem;">
-        <div class="card-body">
-            <h5 class="card-title">{{ Klasse.subjects }}</h5>
-            <a class="btn btn-primary" href="{% url 'notenSystem:detailseite_schueler' Klasse.subjects %}">Open</a>
-        </div>
-    </div>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th scope="col">Number</th>
+        <th scope="col">Student</th>
+        <th scope="col">Exam</th>
+        <th scope="col">Intermediate Note</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for choice in question.choice_set.all %}             Muss noch geändert werden.
+    <tr>
+        <th scope="row">{{forloop.counter}}</th>
+        <td>{{ Subject.Student }}</td>
+        <td>{{ Student.noten }}</td>                        Der Student braucht auch eine eigene Note in der Datenbank.
+    </tr>
     {% endfor %}
-</div>
-{% else %}
-<p>No subjects are available.</p>
-{% endif %}
+    </tbody>
+</table>
+
 </body>
 </html>

@@ -55,19 +55,24 @@
     <footer class="blockquote-footer">Here you can see your subjects, marks and your timetable.</footer>
 </div>
 
-{% if latest_question_list %}
-<div class="row ml-3">
-    {% for question in latest_question_list %}              Muss noch geändert werden.
-    <div class="card mr-3" style="width: 18rem;">
-        <div class="card-body">
-            <h5 class="card-title">{{ Klasse.subjects }}</h5>
-            <a class="btn btn-primary" href="{% url 'notenSystem:detailseite_schueler' Klasse.subjects %}">Open</a>
-        </div>
-    </div>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th scope="col">Number</th>
+        <th scope="col">Exam</th>
+        <th scope="col">Intermediate Note</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for choice in question.choice_set.all %}             Muss noch geändert werden.
+    <tr>
+        <th scope="row">{{forloop.counter}}</th>
+        <td>{{ Klasse.subjects }}</td>
+        <td>{{ Subject.noten }}</td>
+    </tr>
     {% endfor %}
-</div>
-{% else %}
-<p>No subjects are available.</p>
-{% endif %}
+    </tbody>
+</table>
 </body>
+
 </html>
