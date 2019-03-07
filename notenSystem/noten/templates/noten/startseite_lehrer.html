@@ -35,16 +35,13 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="{% url 'noten:index' %}">Home</a>
+                <a class="nav-link" href="{% url 'noten:startseite_lehrer' %}">Home</a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="/admin">Admin</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="{% url 'noten:index' %}">Log out</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="{% url 'noten:index' %}">Stundenplan</a>
+                <a class="nav-link" href="{% url 'noten:startseite_lehrer' %}">Log out</a>
             </li>
         </ul>
     </div>
@@ -52,22 +49,23 @@
 
 <div class="jumbotron text-center">
     <h1>Marksystem</h1>
-    <footer class="blockquote-footer">Here you can see your subjects, marks and your timetable.</footer>
+    <footer class="blockquote-footer">Here you can see your classes in which you teach.</footer>
 </div>
 
 {% if latest_question_list %}
 <div class="row ml-3">
-    {% for question in latest_question_list %}              Muss noch geändert werden.
+    {% for question in latest_question_list %}
     <div class="card mr-3" style="width: 18rem;">
         <div class="card-body">
-            <h5 class="card-title">{{ Klasse.subjects }}</h5>
-            <a class="btn btn-primary" href="{% url 'notenSystem:detailseite_schueler' Klasse.subjects %}">Open</a>
+            <h5 class="card-title">{{ Klasse.class_name }}</h5>
+            <a class="btn btn-primary" href="{% url 'noten:detailseite_lehrer' Klasse.Subject %}">Open</a>
         </div>
     </div>
     {% endfor %}
 </div>
 {% else %}
-<p>No subjects are available.</p>
+<p>No classes are available.</p>
 {% endif %}
 </body>
+
 </html>

@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<html lang="en">
+
 <head>
     {% load static %}
     <link href="{% static 'polls/style.css' %}" rel="stylesheet" type="text/css">
@@ -33,13 +35,16 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="{% url 'notenSystem:index' %}">Home</a>
+                <a class="nav-link" href="{% url 'noten:startseite_schueler' %}">Home</a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="/admin">Admin</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="{% url 'notenSystem:index' %}">Log out</a>
+                <a class="nav-link" href="{% url 'noten:startseite_schueler' %}">Log out</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'noten:startseite_schueler' %}">Stundenplan</a>
             </li>
         </ul>
     </div>
@@ -47,22 +52,16 @@
 
 <div class="jumbotron text-center">
     <h1>Marksystem</h1>
-    <footer class="blockquote-footer">Here you can see your subjects.</footer>
+    <footer class="blockquote-footer">Here you can see your subjects, marks and your timetable.</footer>
 </div>
 
 {% if latest_question_list %}
 <div class="row ml-3">
-    {% for question in latest_question_list %}
+    {% for question in latest_question_list %}              Muss noch geändert werden.
     <div class="card mr-3" style="width: 18rem;">
         <div class="card-body">
             <h5 class="card-title">{{ Klasse.subjects }}</h5>
-            <a class="btn btn-primary" href="{% url 'notenSystem:detail_lehrer_subjects' Klasse.subjects %}">Open</a>
-        </div>
-    </div>
-    <div class="card mr-3" style="width: 18rem;">
-        <div class="card-body">
-            <h5 class="card-title">{{ Stundenplan }}</h5>
-            <a class="btn btn-primary" href="{% url 'notenSystem:detail_lehrer_subjects' Klasse.subjects %}">Stundenplan</a>
+            <a class="btn btn-primary" href="{% url 'notenSystem:detailseite_schueler' Klasse.subjects %}">Open</a>
         </div>
     </div>
     {% endfor %}

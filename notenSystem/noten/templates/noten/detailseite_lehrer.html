@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
-
 <head>
     {% load static %}
     <link href="{% static 'polls/style.css' %}" rel="stylesheet" type="text/css">
@@ -35,13 +33,13 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="{% url 'notenSystem:index' %}">Home</a>
+                <a class="nav-link" href="{% url 'noten:index' %}">Home</a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="/admin">Admin</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="{% url 'notenSystem:index' %}">Log out</a>
+                <a class="nav-link" href="{% url 'noten:index' %}">Log out</a>
             </li>
         </ul>
     </div>
@@ -49,7 +47,7 @@
 
 <div class="jumbotron text-center">
     <h1>Marksystem</h1>
-    <footer class="blockquote-footer">Here you can see your classes in which you teach.</footer>
+    <footer class="blockquote-footer">Here you can see your subjects.</footer>
 </div>
 
 {% if latest_question_list %}
@@ -57,15 +55,20 @@
     {% for question in latest_question_list %}
     <div class="card mr-3" style="width: 18rem;">
         <div class="card-body">
-            <h5 class="card-title">{{ Klasse.class_name }}</h5>
+            <h5 class="card-title">{{ Klasse.subjects }}</h5>
             <a class="btn btn-primary" href="{% url 'notenSystem:detail_lehrer_subjects' Klasse.subjects %}">Open</a>
+        </div>
+    </div>
+    <div class="card mr-3" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{ Stundenplan }}</h5>
+            <a class="btn btn-primary" href="{% url 'notenSystem:detail_lehrer_subjects' Klasse.subjects %}">Stundenplan</a>
         </div>
     </div>
     {% endfor %}
 </div>
 {% else %}
-<p>No classes are available.</p>
+<p>No subjects are available.</p>
 {% endif %}
 </body>
-
 </html>
