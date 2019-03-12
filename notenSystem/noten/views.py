@@ -1,10 +1,5 @@
-from django.http import HttpResponseRedirect
-from django.shortcuts import get_object_or_404, render
-from django.urls import reverse
 from django.views import generic
-from django.utils import timezone
 
-from .models import Klasse, Student, Teacher, Subject, Note, Unterricht, Prüfung, Test
 
 class IndexView(generic.ListView):
     template_name = 'noten/startseite_lehrer.html'
@@ -16,6 +11,20 @@ class IndexView(generic.ListView):
 
 class LoginView(generic.ListView):
     template_name = 'noten/loginseite.html'
+
+    def get_queryset(self):
+        return "test"
+
+
+class SignupView(generic.ListView):
+    template_name = 'noten/signupSeite.html'
+
+    def get_queryset(self):
+        return "test"
+
+
+class startseite_schuelerView(generic.ListView):
+    template_name = 'noten/startseite_schueler.html'
 
     def get_queryset(self):
         return "test"
