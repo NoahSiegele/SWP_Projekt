@@ -59,12 +59,6 @@
             <a class="btn btn-primary" href="{% url 'notenSystem:detail_lehrer_subjects' Klasse.subjects %}">Open</a>
         </div>
     </div>
-    <div class="card mr-3" style="width: 18rem;">
-        <div class="card-body">
-            <h5 class="card-title">{{ Stundenplan }}</h5>
-            <a class="btn btn-primary" href="{% url 'notenSystem:detail_lehrer_subjects' Klasse.subjects %}">Stundenplan</a>
-        </div>
-    </div>
     {% endfor %}
 </div>
 {% else %}

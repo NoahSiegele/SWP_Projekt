@@ -10,7 +10,7 @@ class Klasse(models.Model):
         return self.class_name
 
 class Student(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, )
+    user = models.ForeignKey(User, on_delete=models.CASCADE,)
     klasse = models.ForeignKey(Klasse, on_delete=models.SET_NULL, null=True, blank=True)
 
     def __str__(self):
