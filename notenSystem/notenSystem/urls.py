@@ -22,4 +22,5 @@ app_name = 'noten'
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('noten.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
 ]
