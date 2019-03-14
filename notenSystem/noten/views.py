@@ -22,8 +22,7 @@ def index(request):
             return HttpResponseRedirect('/startseite_schueler')
 
 
-class startseite_schuelerView(LoginRequiredMixin,
-                              generic.ListView):
+class startseite_schuelerView(LoginRequiredMixin, generic.ListView):
     template_name = 'noten/startseite_schueler.html'
 
     def get_queryset(self):
