@@ -27,3 +27,15 @@ class startseite_schuelerView(LoginRequiredMixin, generic.ListView):
 
     def get_queryset(self):
         return "test"
+
+class startseite_lehrerView(LoginRequiredMixin, generic.ListView):
+    template_name = 'noten/startseite_lehrer.html'
+
+    def get_queryset(self):
+        return "test"
+
+class loginView(LoginRequiredMixin, generic.ListView):
+    template_name = 'registration/login.html'
+
+    def get_queryset(self):
+        return 'test'
