@@ -2,7 +2,9 @@ from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
+from django.shortcuts import render
 
+from .models import Klasse, Student, Test, Subject, Prüfung, Note, Unterricht, User
 
 class IndexView(generic.ListView):
     template_name = 'registration/login.html'
@@ -25,13 +27,23 @@ def index(request):
 
 
 class startseite_schuelerView(LoginRequiredMixin, generic.ListView):
+    model = Student
     template_name = 'noten/startseite_schueler.html'
 
     def get_queryset(self):
         return "test"
 
-class startseite_lehrerView(LoginRequiredMixin, generic.ListView):
-    template_name = 'noten/startseite_lehrer.html'
+# class startseite_lehrerView(LoginRequiredMixin, generic.ListView):
+#     model = Klasse
+#     template_name = 'noten/startseite_lehrer.html'
+#     context_object_name = 'klasse_list'
+#
+#     def get_queryset(self):
+#         return Student.klasse.objects.all()
 
-    def get_queryset(self):
-        return "test"
+
+@login_required
+def startseite_lehrer(request):
+    klassen = Klasse.objects.filter(unterricht__Teacher=request.user)
+
+    return render(request , 'noten/startseite_lehrer.html', {'latest_klasse_list' : klassen})
