@@ -24,3 +24,9 @@ class startseite_schuelerView(generic.ListView):
 
     def get_queryset(self):
         return "test"
+
+class startseite_lehrerView(generic.ListView):
+    template_name = 'noten/startseite_lehrer.html'
+
+    def get_queryset(self):
+        return "test"
