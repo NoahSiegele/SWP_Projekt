@@ -1,16 +1,18 @@
 from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
 
 
 class IndexView(generic.ListView):
-    template_name = 'noten/startseite_lehrer.html'
+    template_name = 'registration/login.html'
 
     def get_queryset(self):
         """Return the last five published questions."""
         return "test"
 
 
+@login_required
 def index(request):
     usergroups = request.user.groups.all()
     names = []
@@ -33,9 +35,3 @@ class startseite_lehrerView(LoginRequiredMixin, generic.ListView):
 
     def get_queryset(self):
         return "test"
-
-class loginView(LoginRequiredMixin, generic.ListView):
-    template_name = 'registration/login.html'
-
-    def get_queryset(self):
-        return 'test'

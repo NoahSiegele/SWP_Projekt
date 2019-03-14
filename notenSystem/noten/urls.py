@@ -9,7 +9,7 @@ from django.contrib.auth import views as auth_views
 
 app_name = 'noten'
 urlpatterns = [
-    path('', views.loginView.as_view(), name='index'),
+    path('', views.index, name='index'),
     path('startseite_lehrer/', views.startseite_lehrerView.as_view(), name='startseite_lehrer'),
     path('startseite_schueler/', views.startseite_schuelerView.as_view(), name='startseite_schueler'),
     url(r'^admin/', admin.site.urls),
