@@ -47,3 +47,9 @@ def startseite_lehrer(request):
     klassen = Klasse.objects.filter(unterricht__Teacher=request.user)
 
     return render(request , 'noten/startseite_lehrer.html', {'latest_klasse_list' : klassen})
+
+@login_required
+def startseite_schueler(request):
+    subjects = Subject.objects.all()
+
+    return render(request, 'noten/startseite_schueler.html', {'latest_subject_list' : subjects})

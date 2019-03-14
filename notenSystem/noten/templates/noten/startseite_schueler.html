@@ -34,7 +34,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="">Home</a>
+                <a class="nav-link" href="noten/startseite_schueler">Home</a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="/admin">Admin</a>
@@ -51,12 +51,12 @@
     <footer class="blockquote-footer">Here you can see your subjects, marks and your timetable.</footer>
 </div>
 
-{% if latest_question_list %}
+{% if latest_subject_list %}
 <div class="row ml-3">
-    {% for question in latest_question_list %}
+    {% for subject in latest_subject_list %}
     <div class="card mr-3" style="width: 18rem;">
         <div class="card-body">
-            <h5 class="card-title">{{ Klasse.subjects }}</h5>
+            <h5 class="card-title">{{ subject.subject_name }}</h5>
             <a class="btn btn-primary" href="">Open</a>
         </div>
     </div>

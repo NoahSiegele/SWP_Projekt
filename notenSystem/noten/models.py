@@ -14,7 +14,7 @@ class Student(models.Model):
     klasse = models.ForeignKey(Klasse, on_delete=models.SET_NULL, null=True, blank=True)
 
     def __str__(self):
-        return self.user
+        return self.user.username
 
     class Meta:
         verbose_name_plural = "Students"
