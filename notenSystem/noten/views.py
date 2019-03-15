@@ -25,11 +25,18 @@ def index(request):
         elif 'Student' in names:
             return HttpResponseRedirect('/startseite_schueler')
 
-class detailseite_lehrerView(generic.ListView, LoginRequiredMixin):
+class detailseite_lehrerView(LoginRequiredMixin, generic.ListView):
+    model = Student
     template_name = 'noten/detailseite_lehrer.html'
 
     def get_queryset(self):
         return "test"
+
+@login_required
+def detailseite_lehrerView(request):
+    subjects = Subject.objects.all()
+
+    return render(request, 'noten/detailseite_lehrer.html', {'latest_subject_list' : subjects})
 
 
 class startseite_schuelerView(LoginRequiredMixin, generic.ListView):
@@ -38,14 +45,6 @@ class startseite_schuelerView(LoginRequiredMixin, generic.ListView):
 
     def get_queryset(self):
         return "test"
-
-# class startseite_lehrerView(LoginRequiredMixin, generic.ListView):
-#     model = Klasse
-#     template_name = 'noten/startseite_lehrer.html'
-#     context_object_name = 'klasse_list'
-#
-#     def get_queryset(self):
-#         return Student.klasse.objects.all()
 
 
 @login_required
@@ -59,4 +58,10 @@ def startseite_schueler(request):
     subjects = Subject.objects.all()
 
     return render(request, 'noten/startseite_schueler.html', {'latest_subject_list' : subjects})
+
+@login_required
+def detailseite_lehrer(request):
+    subjects = Subject.object.filter(Subject_subject_name = request.user)
+
+    return render(request, 'noten/detailseite_lehrer.html', {'latest.subject_list' : subjects})
 

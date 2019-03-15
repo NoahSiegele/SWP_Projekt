@@ -39,6 +39,9 @@ class Note(models.Model):
     note = models.IntegerField(default=0)
     Student = models.ForeignKey(Student, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return self.Student
+
     class Meta:
         verbose_name_plural = "Noten"
 
