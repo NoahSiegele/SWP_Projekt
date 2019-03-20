@@ -61,11 +61,10 @@
     </tr>
     </thead>
     <tbody>
-    {% for choice in question.choice_set.all %}             Muss noch geändert werden.
+    {% for noten in latest_noten_list %}
     <tr>
         <th scope="row">{{forloop.counter}}</th>
-        <td>{{ Klasse.subjects }}</td>
-        <td>{{ Subject.noten }}</td>
+        <td>{{ noten.note }}</td>
     </tr>
     {% endfor %}
     </tbody>
