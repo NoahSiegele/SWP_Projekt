@@ -19,3 +19,34 @@ urlpatterns = [
     path('detailseite_lehrer/', views.detailseite_lehrer, name='detailseite_lehrer'),
     url(r'^admin/', admin.site.urls),
 ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
