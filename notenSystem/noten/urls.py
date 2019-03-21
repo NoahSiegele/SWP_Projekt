@@ -12,6 +12,7 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('startseite_lehrer/', views.startseite_lehrer, name='startseite_lehrer'),
     path('startseite_schueler/', views.startseite_schueler, name='startseite_schueler'),
-    path('<int:student_id>/detailseite_schueler/', views.detailseite_schueler, name='detailseite_schueler'),
+    path('<int:subject_id>/detailseite_schueler/', views.detailseite_schueler, name='detailseite_schueler'),
+    path('detailseite_lehrer/', views.detailseite_lehrer, name='detailseite_lehrer'),
     url(r'^admin/', admin.site.urls),
 ]
