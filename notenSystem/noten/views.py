@@ -69,4 +69,10 @@ def detailseite_schueler(request, subject_id):
 def detailseite_notenvergebung_lehrer(request, klasse_noten_id):
     notenvergebung = Student.objects.all()
 
-    return render(request, 'noten/detailseite_notenvergebung_lehrer.html', {'latest_student_list' : notenvergebung})
+    return render(request, 'noten/detailseite_notenvergebung_lehrer.html', {'latest_student_list' : notenvergebung, 'klasse_noten_id' : klasse_noten_id})
+
+@login_required
+def noteneintragung_lehrer(request, klasse_noten_id):
+    noteneintragung = Student.objects.all()
+
+    return render(request, 'noten/noteneintragung_lehrer.html')

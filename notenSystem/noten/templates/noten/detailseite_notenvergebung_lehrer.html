@@ -55,7 +55,7 @@
     <div class="card mr-3" style="width: 18rem;">
         <div class="card-body">
             <h5 class="card-title">{{ student.user }}</h5>
-            <a class="btn btn-primary" href="">Open</a>
+            <a class="btn btn-primary" href="{% url 'noten:noteneintragung_lehrer' klasse_noten_id%}">Open</a>
         </div>
     </div>
     {% endfor %}
