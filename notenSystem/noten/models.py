@@ -41,9 +41,6 @@ class Note(models.Model):
     Student = models.ForeignKey(Student, on_delete=models.CASCADE)
     Unterricht = models.ForeignKey(Unterricht, on_delete=models.CASCADE, null=True, blank=True)
 
-    def __str__(self):
-        return self.Student
-
     class Meta:
         verbose_name_plural = "Noten"
 
