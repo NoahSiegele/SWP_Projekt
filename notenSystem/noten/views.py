@@ -33,13 +33,6 @@ class detailseite_lehrerView(LoginRequiredMixin, generic.ListView):
     def get_queryset(self):
         return "test"
 
-@login_required
-def detailseite_lehrerView(request):
-    subjects = Subject.objects.all()
-
-    return render(request, 'noten/detailseite_lehrer.html', {'latest_subject_list' : subjects})
-
-
 class startseite_schuelerView(LoginRequiredMixin, generic.ListView):
     model = Student
     template_name = 'noten/startseite_schueler.html'
@@ -50,7 +43,7 @@ class startseite_schuelerView(LoginRequiredMixin, generic.ListView):
 
 @login_required
 def startseite_lehrer(request):
-    klassen = Klasse.objects.filter(unterricht__Teacher=request.user)
+    klassen = Klasse.objects.filter(unterricht__Teacher=request.user).distinct()
 
     return render(request , 'noten/startseite_lehrer.html', {'latest_klasse_list' : klassen})
 
@@ -61,8 +54,8 @@ def startseite_schueler(request):
     return render(request, 'noten/startseite_schueler.html', {'latest_subject_list' : subjects})
 
 @login_required
-def detailseite_lehrer(request):
-    subjects = Subject.objects.filter(Subject_subject_name = request.user)
+def detailseite_lehrer(request, klasse_id):
+    subjects = Subject.objects.filter(unterricht__Teacher=request.user, unterricht__Klasse__id = klasse_id)
 
     return render(request, 'noten/detailseite_lehrer.html', {'latest_subject_list' : subjects})
 
@@ -72,3 +65,8 @@ def detailseite_schueler(request, student_id):
 
     return render(request, 'noten/detailseite_schueler.html', {'latest_noten_liste' : noten})
 
+@login_required
+def detailseite_notenvergebung_lehrer(request, klasse_noten_id):
+    notenvergebung = Student.objects.all()
+
+    return render(request, 'noten/detailseite_notenvergebung_lehrer.html', {'latest_student_list' : notenvergebung})

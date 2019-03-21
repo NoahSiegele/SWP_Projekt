@@ -35,7 +35,6 @@ class Unterricht(models.Model):
     class Meta:
         verbose_name_plural = "Unterrichte"
 
-
 class Note(models.Model):
     note = models.IntegerField(default=0)
     Student = models.ForeignKey(Student, on_delete=models.CASCADE)
