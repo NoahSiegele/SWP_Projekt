@@ -69,5 +69,6 @@ def detailseite_lehrer(request):
 @login_required
 def detailseite_schueler(request, subject_id):
     noten = Note.objects.filter(Student__user = request.user, Unterricht_id=subject_id)
+
     return render(request, 'noten/detailseite_schueler.html', {'latest_noten_liste' : noten})
 
