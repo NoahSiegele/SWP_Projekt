@@ -2,6 +2,10 @@
 <html lang="en">
 
 <head>
+
+    <meta charset="UTF-8">
+    <title>Login</title>
+
     {% load static %}
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -25,6 +29,38 @@
 </head>
 
 <body>
+{% if form.errors %}
+<p>Login with this username and password not possible. Please try again.</p>
+{% endif %}
+
+{% if next %}
+{% if user.is_authenticated %}
+<p>Your account doesn't have access to this page. To proceed,
+    please login with an account that has access.</p>
+{% else %}
+<p>Please login to see this page.</p>
+{% endif %}
+{% endif %}
+
+<form method="post" action="{% url 'loginseite' %}">
+    {% csrf_token %}
+    <table>
+
+        <tr>
+            <td>{{ form.username.label_tag }}</td>
+            <td>{{ form.username }}</td>
+        </tr>
+
+        <tr>
+            <td>{{ form.password.label_tag }}</td>
+            <td>{{ form.password }}</td>
+        </tr>
+    </table>
+
+    <input type="submit" value="login"/>
+    <input type="hidden" name="next" value="{{ next }}"/>
+</form>
+
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>

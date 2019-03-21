@@ -34,7 +34,7 @@ class detailseite_lehrerView(LoginRequiredMixin, generic.ListView):
 
 @login_required
 def detailseite_lehrerView(request):
-    subjects = Subject.objects.all()
+    subjects = Subject.objects.filter(unterricht__Teacher = request.user)
 
     return render(request, 'noten/detailseite_lehrer.html', {'latest_subject_list' : subjects})
 
@@ -61,7 +61,7 @@ def startseite_schueler(request):
 
 @login_required
 def detailseite_lehrer(request):
-    subjects = Subject.object.filter(Subject_subject_name = request.user)
+    subjects = Subject.object.filter(Subject__subject_name = request.user)
 
     return render(request, 'noten/detailseite_lehrer.html', {'latest.subject_list' : subjects})
 
