@@ -6,7 +6,5 @@ admin.site.register(Klasse)
 admin.site.register(Subject)
 admin.site.register(Unterricht)
 admin.site.register(Student)
-admin.site.register(Prüfung)
-admin.site.register(Test)
 admin.site.register(Note)
 

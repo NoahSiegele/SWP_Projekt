@@ -35,9 +35,11 @@ class Unterricht(models.Model):
     class Meta:
         verbose_name_plural = "Unterrichte"
 
+
 class Note(models.Model):
     note = models.IntegerField(default=0)
     Student = models.ForeignKey(Student, on_delete=models.CASCADE)
+    Unterricht = models.ForeignKey(Unterricht, on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self):
         return self.Student
@@ -45,19 +47,17 @@ class Note(models.Model):
     class Meta:
         verbose_name_plural = "Noten"
 
-class Prüfung(models.Model):
-    note = models.IntegerField(default=0)
-    Note = models.ForeignKey(Note, on_delete=models.CASCADE)
-
-    class Meta:
-        verbose_name_plural = "Prüfungen"
-
 class Test(models.Model):
-    note = models.IntegerField(default=0)
-    Note = models.ForeignKey(Note, on_delete=models.CASCADE)
+    Note = models.ForeignKey(Note, on_delete=models.CASCADE, null=True, blank=True)
 
     class Meta:
         verbose_name_plural = "Teste"
+
+class Prüfung(models.Model):
+    Note = models.ForeignKey(Note, on_delete=models.CASCADE, null=True, blank=True)
+
+    class Meta:
+        verbose_name_plural = "Prüfungstyp"
 
 
 
