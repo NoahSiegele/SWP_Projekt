@@ -19,34 +19,3 @@ urlpatterns = [
     path('<int:subject_id>/noteneintragung_lehrer/<int:student_id>/eintragen', views.note_eintragen, name="noten_eintragen"),
     url(r'^admin/', admin.site.urls),
 ]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
