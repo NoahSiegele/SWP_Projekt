@@ -57,7 +57,7 @@
     <tr>
         <th scope="col">Number</th>
         <th scope="col">Mark</th>
-        <th scope="col">Intermediate Note</th>
+        <th scope="col">Designation</th>
     </tr>
     </thead>
     <tbody>
@@ -65,6 +65,7 @@
     <tr>
         <th scope="row">{{forloop.counter}}</th>
         <td>{{ noten.note }}</td>
+        <td> {{ noten.type }}</td>
     </tr>
     {% endfor %}
     </tbody>

@@ -83,6 +83,6 @@ def note_eintragen(request, subject_id, student_id):
         name = request.POST['examname']
         note = request.POST['note']
         student = Student.objects.get(pk=student_id)
-        n = Note(Unterricht=Unterricht.objects.get(pk=subject_id), Student=student, note=note)
+        n = Note(Unterricht=Unterricht.objects.get(pk=subject_id), Student=student, note=note, type=name)
         n.save()
         return HttpResponseRedirect(reverse('noten:detailseite_notenvergebung_lehrer', args=(subject_id,)))
