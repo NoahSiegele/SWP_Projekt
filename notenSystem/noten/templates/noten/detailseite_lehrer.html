@@ -50,13 +50,13 @@
     <footer class="blockquote-footer">Here you can see your subjects.</footer>
 </div>
 
-{% if latest_subject_list %}
+{% if latest_unterricht_list %}
 <div class="row ml-3">
-    {% for subject in latest_subject_list %}
+    {% for unterricht in latest_unterricht_list %}
     <div class="card mr-3" style="width: 18rem;">
         <div class="card-body">
-            <h5 class="card-title">{{ subject.subject_name }}</h5>
-            <a class="btn btn-primary" href="{% url 'noten:detailseite_notenvergebung_lehrer' subject.id %}">Open</a>
+            <h5 class="card-title">{{ unterricht.Subject.subject_name }}</h5>
+            <a class="btn btn-primary" href="{% url 'noten:detailseite_notenvergebung_lehrer' unterricht.id %}">Open</a>
         </div>
     </div>
     {% endfor %}

@@ -2,7 +2,7 @@ from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render
+from django.shortcuts import render, reverse
 
 from .models import Klasse, Student, Test, Subject, Prüfung, Note, Unterricht, User
 
@@ -55,9 +55,8 @@ def startseite_schueler(request):
 
 @login_required
 def detailseite_lehrer(request, klasse_id):
-    subjects = Subject.objects.filter(unterricht__Teacher=request.user, unterricht__Klasse__id = klasse_id)
-
-    return render(request, 'noten/detailseite_lehrer.html', {'latest_subject_list' : subjects})
+    unterricht = Unterricht.objects.filter(Teacher=request.user, Klasse__id = klasse_id)
+    return render(request, 'noten/detailseite_lehrer.html', {'latest_unterricht_list' : unterricht})
 
 @login_required
 def detailseite_schueler(request, subject_id):
@@ -67,12 +66,23 @@ def detailseite_schueler(request, subject_id):
 
 @login_required
 def detailseite_notenvergebung_lehrer(request, klasse_noten_id):
-    notenvergebung = Student.objects.all()
+    notenvergebung = Student.objects.filter(klasse__unterricht__id= klasse_noten_id)
 
     return render(request, 'noten/detailseite_notenvergebung_lehrer.html', {'latest_student_list' : notenvergebung, 'klasse_noten_id' : klasse_noten_id})
 
 @login_required
-def noteneintragung_lehrer(request, klasse_noten_id):
+def noteneintragung_lehrer(request, klasse_noten_id, student_id):
     noteneintragung = Student.objects.all()
 
-    return render(request, 'noten/noteneintragung_lehrer.html')
+    return render(request, 'noten/noteneintragung_lehrer.html', {'subject_id': klasse_noten_id, 'student_id': student_id})
+
+
+@login_required
+def note_eintragen(request, subject_id, student_id):
+    if request.POST:
+        name = request.POST['examname']
+        note = request.POST['note']
+        student = Student.objects.get(pk=student_id)
+        n = Note(Unterricht=Unterricht.objects.get(pk=subject_id), Student=student, note=note)
+        n.save()
+        return HttpResponseRedirect(reverse('noten:detailseite_notenvergebung_lehrer', args=(subject_id,)))

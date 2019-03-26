@@ -15,7 +15,8 @@ urlpatterns = [
     path('<int:klasse_id>/detailseite_lehrer/', views.detailseite_lehrer,name='detailseite_lehrer'),
     path('<int:klasse_noten_id>/detailseite__lehrer', views.detailseite_notenvergebung_lehrer, name='detailseite_notenvergebung_lehrer'),
     path('<int:subject_id>/detailseite_schueler/', views.detailseite_schueler, name='detailseite_schueler'),
-    path('<int:klasse_noten_id>/noteneintragung_lehrer/', views.noteneintragung_lehrer, name="noteneintragung_lehrer"),
+    path('<int:klasse_noten_id>/noteneintragung_lehrer/<int:student_id>', views.noteneintragung_lehrer, name="noteneintragung_lehrer"),
+    path('<int:subject_id>/noteneintragung_lehrer/<int:student_id>/eintragen', views.note_eintragen, name="noten_eintragen"),
     url(r'^admin/', admin.site.urls),
 ]
 
