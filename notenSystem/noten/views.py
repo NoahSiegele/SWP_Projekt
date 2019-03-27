@@ -10,10 +10,7 @@ class IndexView(generic.ListView):
     template_name = 'registration/login.html'
 
     def get_queryset(self):
-        """Return the last five published questions."""
-
         return "test"
-
 
 @login_required
 def index(request):
@@ -39,7 +36,6 @@ class startseite_schuelerView(LoginRequiredMixin, generic.ListView):
 
     def get_queryset(self):
         return "test"
-
 
 @login_required
 def startseite_lehrer(request):

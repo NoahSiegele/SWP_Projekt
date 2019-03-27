@@ -3,7 +3,6 @@
 
 <head>
     {% load static %}
-    <link href="{% static 'polls/style.css' %}" rel="stylesheet" type="text/css">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
@@ -49,7 +48,7 @@
 
 <div class="jumbotron text-center">
     <h1>Marksystem</h1>
-    <footer class="blockquote-footer">Here you can see your subjects, marks and your timetable.</footer>
+    <footer class="blockquote-footer">Here you can see your marks in this subject.</footer>
 </div>
 
 <table class="table table-striped">
@@ -70,5 +69,6 @@
     {% endfor %}
     </tbody>
 </table>
+
 </body>
 </html>

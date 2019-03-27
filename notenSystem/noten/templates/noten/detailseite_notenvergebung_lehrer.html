@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <head>
     {% load static %}
-    <link href="{% static 'polls/style.css' %}" rel="stylesheet" type="text/css">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
@@ -55,7 +54,8 @@
     <div class="card mr-3" style="width: 18rem;">
         <div class="card-body">
             <h5 class="card-title">{{ student.user }}</h5>
-            <a class="btn btn-primary" href="{% url 'noten:noteneintragung_lehrer' klasse_noten_id student.id%}">Open</a>
+            <a class="btn btn-primary"
+               href="{% url 'noten:noteneintragung_lehrer' klasse_noten_id student.id%}">Open</a>
         </div>
     </div>
     {% endfor %}
