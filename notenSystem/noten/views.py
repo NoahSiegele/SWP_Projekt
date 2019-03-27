@@ -3,6 +3,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, reverse
+from django.contrib.auth import logout
 
 from .models import Klasse, Student, Test, Subject, Prüfung, Note, Unterricht, User
 
@@ -11,6 +12,13 @@ class IndexView(generic.ListView):
 
     def get_queryset(self):
         return "test"
+
+
+@login_required
+def logout_view(request):
+    logout(request)
+
+    return render(request, 'registration/logout1.html')
 
 @login_required
 def index(request):
@@ -22,20 +30,6 @@ def index(request):
             return HttpResponseRedirect('/startseite_lehrer')
         elif 'Student' in names:
             return HttpResponseRedirect('/startseite_schueler')
-
-class detailseite_lehrerView(LoginRequiredMixin, generic.ListView):
-    model = Student
-    template_name = 'noten/detailseite_lehrer.html'
-
-    def get_queryset(self):
-        return "test"
-
-class startseite_schuelerView(LoginRequiredMixin, generic.ListView):
-    model = Student
-    template_name = 'noten/startseite_schueler.html'
-
-    def get_queryset(self):
-        return "test"
 
 @login_required
 def startseite_lehrer(request):
@@ -83,3 +77,19 @@ def note_eintragen(request, subject_id, student_id):
         n = Note(Unterricht=Unterricht.objects.get(pk=subject_id), Student=student, note=note, type=name)
         n.save()
         return HttpResponseRedirect(reverse('noten:noteneintragung_lehrer', args=(subject_id, student_id, )))
+
+
+
+#class detailseite_lehrerView(LoginRequiredMixin, generic.ListView):
+ #   model = Student
+  #  template_name = 'noten/detailseite_lehrer.html'
+#
+ #   def get_queryset(self):
+  #      return "test"
+#
+#class startseite_schuelerView(LoginRequiredMixin, generic.ListView):
+ #   model = Student
+  #  template_name = 'noten/startseite_schueler.html'
+
+   # def get_queryset(self):
+    #    return "test"
