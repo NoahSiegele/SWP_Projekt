@@ -100,5 +100,24 @@
             </div>
         </div>
 </form>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th scope="col">Number</th>
+        <th scope="col">Mark</th>
+        <th scope="col">Designation</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for noten in latest_noten_list %}
+    <tr>
+        <th scope="row">{{forloop.counter}}</th>
+        <td>{{ noten.note }}</td>
+        <td> {{ noten.type }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
 </body>
 </html>

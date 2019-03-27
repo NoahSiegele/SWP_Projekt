@@ -73,8 +73,9 @@ def detailseite_notenvergebung_lehrer(request, klasse_noten_id):
 @login_required
 def noteneintragung_lehrer(request, klasse_noten_id, student_id):
     noteneintragung = Student.objects.all()
+    noten = Note.objects.filter(Student= Student.objects.get(pk=student_id))
 
-    return render(request, 'noten/noteneintragung_lehrer.html', {'subject_id': klasse_noten_id, 'student_id': student_id})
+    return render(request, 'noten/noteneintragung_lehrer.html', {'subject_id': klasse_noten_id, 'student_id': student_id, 'latest_noten_list' : noten})
 
 
 @login_required
@@ -85,4 +86,4 @@ def note_eintragen(request, subject_id, student_id):
         student = Student.objects.get(pk=student_id)
         n = Note(Unterricht=Unterricht.objects.get(pk=subject_id), Student=student, note=note, type=name)
         n.save()
-        return HttpResponseRedirect(reverse('noten:detailseite_notenvergebung_lehrer', args=(subject_id,)))
+        return HttpResponseRedirect(reverse('noten:noteneintragung_lehrer', args=(subject_id, student_id, )))
