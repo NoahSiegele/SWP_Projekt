@@ -13,7 +13,6 @@ class IndexView(generic.ListView):
     def get_queryset(self):
         return "test"
 
-
 @login_required
 def logout_view(request):
     logout(request)
