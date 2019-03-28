@@ -52,7 +52,7 @@
 {% if latest_unterricht_list %}
 <div class="row ml-3">
     {% for unterricht in latest_unterricht_list %}
-    <div class="card mr-3" style="width: 18rem;">
+    <div class="card mr-3 mb-3" style="width: 18rem;">
         <div class="card-body">
             <h5 class="card-title">{{ unterricht.Subject.subject_name }}</h5>
             <a class="btn btn-primary" href="{% url 'noten:detailseite_notenvergebung_lehrer' unterricht.id %}">Open</a>
