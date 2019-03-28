@@ -55,7 +55,7 @@
 {% if latest_subject_list %}
 <div class="row ml-3">
     {% for subject in latest_subject_list %}
-    <div class="card mr-3" style="width: 18rem;">
+    <div class="card mr-3 mb-3" style="width: 18rem;">
         <div class="card-body">
             <h5 class="card-title">{{ subject.Subject.subject_name }}</h5>
             <a class="btn btn-primary" href="{% url 'noten:detailseite_schueler' subject.id %}">Open</a>
