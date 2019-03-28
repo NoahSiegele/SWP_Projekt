@@ -23,7 +23,7 @@
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-primary">
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
     <a class="navbar-brand" href="">Navbar</a>
     <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
             data-target="#navbarNav" data-toggle="collapse" type="button">
@@ -63,5 +63,45 @@
 {% else %}
 <p>No subjects are available.</p>
 {% endif %}
+
+<footer class="footer-distributed ">
+    <div class="footer-left ">
+    </div>
+    <div>
+        <p>&copy; 2019</p>
+    </div>
+</footer>
+
+<style>
+    html, body {
+        overflow: hidden;
+        height: 100%;
+    }
+
+    .page-wrapper {
+        min-height: 100%;
+        margin-bottom: -319px;
+    }
+
+    .page-wrapper:after {
+        content: "";
+        display: block;
+    }
+
+    .footer-distributed {
+        position: fixed;
+        height: 100px;
+        bottom: 0;
+        background-color: #888888;
+        box-sizing: border-box;
+        width: 100%;
+        font: bold 15px sans-serif;
+        padding-top: 20px;
+        padding-bottom: 5px;
+        margin-top: 440px;
+        text-align: center;
+    }
+</style>
+
 </body>
 </html>

@@ -44,8 +44,6 @@
     <footer class="blockquote-footer">You successfully logged out!</footer>
 </div>
 
-<a id="button" class="btn btn-dark" href="/accounts/login">Login Again</a>
-
 <a class="weatherwidget-io" href="https://forecast7.com/en/47d2711d40/innsbruck/" data-label_1="INNSBRUCK"
    data-label_2="WEATHER" data-theme="original">INNSBRUCK WEATHER</a>
 <script>
@@ -60,6 +58,16 @@
     }(document, 'script', 'weatherwidget-io-js');
 </script>
 
+<a id="button" class="btn btn-success" href="/accounts/login">Login Again</a>
+
+<footer class="footer-distributed ">
+    <div class="footer-left ">
+    </div>
+    <div>
+        <p>&copy; 2019</p>
+    </div>
+</footer>
+
 <style>
     #button{
         margin-top: 50px;
@@ -68,6 +76,34 @@
         margin-bottom: 60px;
     }
 
+    html, body {
+        overflow: hidden;
+        height: 100%;
+    }
+
+    .page-wrapper {
+        min-height: 100%;
+        margin-bottom: -319px;
+    }
+
+    .page-wrapper:after {
+        content: "";
+        display: block;
+    }
+
+    .footer-distributed {
+        position: fixed;
+        height: 100px;
+        bottom: 0;
+        background-color: #888888;
+        box-sizing: border-box;
+        width: 100%;
+        font: bold 15px sans-serif;
+        padding-top: 20px;
+        padding-bottom: 5px;
+        margin-top: 440px;
+        text-align: center;
+    }
 </style>
 
 </body>
