@@ -35,8 +35,6 @@
             <li class="nav-item active">
                 <a class="nav-link" href="/admin">Admin</a>
             </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="/">Login</a>
         </ul>
     </div>
 </nav>
@@ -45,6 +43,8 @@
     <h1>Logged Out</h1>
     <footer class="blockquote-footer">You successfully logged out!</footer>
 </div>
+
+<a id="button" class="btn btn-dark" href="/accounts/login">Login Again</a>
 
 <a class="weatherwidget-io" href="https://forecast7.com/en/47d2711d40/innsbruck/" data-label_1="INNSBRUCK"
    data-label_2="WEATHER" data-theme="original">INNSBRUCK WEATHER</a>
@@ -59,6 +59,16 @@
         }
     }(document, 'script', 'weatherwidget-io-js');
 </script>
+
+<style>
+    #button{
+        margin-top: 50px;
+        font-size: 30px;
+        margin-left: 45%;
+        margin-bottom: 60px;
+    }
+
+</style>
 
 </body>
 </html>
