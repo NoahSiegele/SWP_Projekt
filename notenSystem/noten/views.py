@@ -7,9 +7,6 @@ from django.contrib.auth import logout
 
 from .models import Klasse, Student, Test, Subject, Prüfung, Note, Unterricht, User
 
-class IndexView(generic.ListView):
-    template_name = 'registration/login.html'
-
 @login_required
 def logout_view(request):
     logout(request)
