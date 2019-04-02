@@ -72,4 +72,5 @@ def note_eintragen(request, subject_id, student_id):
         student = Student.objects.get(pk=student_id)
         n = Note(Unterricht=Unterricht.objects.get(pk=subject_id), Student=student, note=note, type=name)
         n.save()
+
         return HttpResponseRedirect(reverse('noten:noteneintragung_lehrer', args=(subject_id, student_id, )))
