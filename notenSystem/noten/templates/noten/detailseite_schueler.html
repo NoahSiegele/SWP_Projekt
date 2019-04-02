@@ -42,6 +42,9 @@
             <li class="nav-item active">
                 <a class="nav-link" href="/logout">Logout</a>
             </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'noten:startseite_schueler' %}">Back</a>
+            </li>
         </ul>
     </div>
 </nav>
@@ -70,42 +73,10 @@
     </tbody>
 </table>
 
-<footer class="footer-distributed ">
-    <div class="footer-left ">
-    </div>
-    <div>
-        <p>&copy; 2019</p>
-    </div>
-</footer>
-
 <style>
     html, body {
         overflow: hidden;
         height: 100%;
-    }
-
-    .page-wrapper {
-        min-height: 100%;
-        margin-bottom: -319px;
-    }
-
-    .page-wrapper:after {
-        content: "";
-        display: block;
-    }
-
-    .footer-distributed {
-        position: fixed;
-        height: 60px;
-        bottom: 0;
-        background-color: #888888;
-        box-sizing: border-box;
-        width: 100%;
-        font: bold 15px sans-serif;
-        padding-top: 20px;
-        padding-bottom: 5px;
-        margin-top: 440px;
-        text-align: center;
     }
 </style>
 </body>
