@@ -10,9 +10,6 @@ from .models import Klasse, Student, Test, Subject, Prüfung, Note, Unterricht, 
 class IndexView(generic.ListView):
     template_name = 'registration/login.html'
 
-    def get_queryset(self):
-        return "test"
-
 @login_required
 def logout_view(request):
     logout(request)
@@ -76,19 +73,3 @@ def note_eintragen(request, subject_id, student_id):
         n = Note(Unterricht=Unterricht.objects.get(pk=subject_id), Student=student, note=note, type=name)
         n.save()
         return HttpResponseRedirect(reverse('noten:noteneintragung_lehrer', args=(subject_id, student_id, )))
-
-
-
-#class detailseite_lehrerView(LoginRequiredMixin, generic.ListView):
- #   model = Student
-  #  template_name = 'noten/detailseite_lehrer.html'
-#
- #   def get_queryset(self):
-  #      return "test"
-#
-#class startseite_schuelerView(LoginRequiredMixin, generic.ListView):
- #   model = Student
-  #  template_name = 'noten/startseite_schueler.html'
-
-   # def get_queryset(self):
-    #    return "test"
