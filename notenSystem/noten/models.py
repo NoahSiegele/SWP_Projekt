@@ -38,6 +38,7 @@ class Unterricht(models.Model):
 class Note(models.Model):
     note = models.IntegerField(default=0)
     type = models.CharField(default="", max_length=150)
+    comment = models.CharField(default="", max_length=150)
     Student = models.ForeignKey(Student, on_delete=models.CASCADE)
     Unterricht = models.ForeignKey(Unterricht, on_delete=models.CASCADE, null=True, blank=True)
 

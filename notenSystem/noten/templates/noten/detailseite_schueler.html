@@ -60,6 +60,7 @@
         <th scope="col">Number</th>
         <th scope="col">Mark</th>
         <th scope="col">Designation</th>
+        <th scope="col">Comment</th>
     </tr>
     </thead>
     <tbody>
@@ -68,6 +69,7 @@
         <th scope="row">{{forloop.counter}}</th>
         <td>{{ noten.note }}</td>
         <td> {{ noten.type }}</td>
+        <td> {{ noten.comment }}</td>
     </tr>
     {% endfor %}
     </tbody>
