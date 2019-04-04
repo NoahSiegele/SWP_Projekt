@@ -30,6 +30,10 @@
 </head>
 <body>
 
+{% if form.errors %}
+<p>Hallo du hast ebas falsch gemacht. </p>
+{% endif %}
+
 <div class="limiter">
     <div class="container-login100" style="background-image: url({% static 'noten/images/bg-01.jpg'%});">
         <div class="wrap-login100 p-t-30 p-b-50">

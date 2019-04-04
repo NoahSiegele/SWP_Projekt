@@ -23,7 +23,7 @@
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-primary" id="navbar">
+<nav class="navbar navbar-expand-lg navbar-light bg-primary">
     <a class="navbar-brand" href="">Navbar</a>
     <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"
             data-target="#navbarNav" data-toggle="collapse" type="button">
@@ -44,13 +44,13 @@
     </div>
 </nav>
 
-<div class="jumbotron text-center" id="header">
+<div class="jumbotron text-center">
     <h1>Marksystem</h1>
     <footer class="blockquote-footer">Here you can see your subjects.</footer>
 </div>
 
 {% if latest_unterricht_list %}
-<div class="row ml-3" id="div">
+<div class="row ml-3">
     {% for unterricht in latest_unterricht_list %}
     <div class="card mr-3 mb-3" style="width: 18rem;">
         <div class="card-body">
@@ -66,20 +66,8 @@
 
 <style>
     html, body {
-        width: 99.6%;
+        overflow-x: hidden;
         height: 100%;
-    }
-
-    #header{
-        width: 100.8%;
-    }
-
-    #navbar{
-        width: 100.8%;
-    }
-
-    #div{
-        width: 99.9%;
     }
 </style>
 
