@@ -14,28 +14,24 @@
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href={% static 'noten/fonts/Linearicons-Free-v1.0.0/icon-font.min.css' %}>
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href={%  static 'noten/vendor/animate/animate.css' %}>
+    <link rel="stylesheet" type="text/css" href={% static 'noten/vendor/animate/animate.css' %}>
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href={%  static 'noten/vendor/css-hamburgers/hamburgers.min.css' %}>
+    <link rel="stylesheet" type="text/css" href={% static 'noten/vendor/css-hamburgers/hamburgers.min.css' %}>
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href={% static 'noten/vendor/animsition/css/animsition.min.css' %}>
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href={% static 'noten/vendor/select2/select2.min.css' %}>
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href={% static 'noten/vendor/daterangepicker/daterangepicker.css'%}>
+    <link rel="stylesheet" type="text/css" href={% static 'noten/vendor/daterangepicker/daterangepicker.css' %}>
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href={% static 'noten/css/util.css'%}>
-    <link rel="stylesheet" type="text/css" href={% static 'noten/css/main.css'%}>
+    <link rel="stylesheet" type="text/css" href={% static 'noten/css/util.css' %}>
+    <link rel="stylesheet" type="text/css" href={% static 'noten/css/main.css' %}>
     <!--===============================================================================================-->
 </head>
 <body>
 
-{% if form.errors %}
-<p>Hallo du hast ebas falsch gemacht. </p>
-{% endif %}
-
 <div class="limiter">
-    <div class="container-login100" style="background-image: url({% static 'noten/images/bg-01.jpg'%});">
+    <div class="container-login100" style="background-image: url({% static 'noten/images/bg-01.jpg' %});">
         <div class="wrap-login100 p-t-30 p-b-50">
 				<span class="login100-form-title p-b-41">
 					Login
@@ -55,6 +51,10 @@
                 <div class="container-login100-form-btn m-t-32 m-b-4">
                     <input type="submit" class="login100-form-btn">
                 </div>
+
+                {% if form.errors %}
+                    <p>Leider wurde das Passwort oder der Benutzername falsch eingegeben. Bitte versuche es erneut! </p>
+                {% endif %}
             </form>
         </div>
     </div>
@@ -63,21 +63,21 @@
 <div id="dropDownSelect1"></div>
 
 <!--===============================================================================================-->
-<script src={% static 'noten/vendor/jquery/jquery-3.2.1.min.js'%}></script>
+<script src={% static 'noten/vendor/jquery/jquery-3.2.1.min.js' %}></script>
 <!--===============================================================================================-->
-<script src={% static 'noten/vendor/animsition/js/animsition.min.js'%}></script>
+<script src={% static 'noten/vendor/animsition/js/animsition.min.js' %}></script>
 <!--===============================================================================================-->
-<script src={% static 'noten/vendor/bootstrap/js/popper.js'%}></script>
-<script src={% static 'noten/vendor/bootstrap/js/bootstrap.min.js'%}></script>
+<script src={% static 'noten/vendor/bootstrap/js/popper.js' %}></script>
+<script src={% static 'noten/vendor/bootstrap/js/bootstrap.min.js' %}></script>
 <!--===============================================================================================-->
-<script src={% static 'noten/vendor/select2/select2.min.js'%}></script>
+<script src={% static 'noten/vendor/select2/select2.min.js' %}></script>
 <!--===============================================================================================-->
-<script src={% static 'noten/vendor/daterangepicker/moment.min.js'%}></script>
-<script src={% static 'noten/vendor/daterangepicker/daterangepicker.js'%}></script>
+<script src={% static 'noten/vendor/daterangepicker/moment.min.js' %}></script>
+<script src={% static 'noten/vendor/daterangepicker/daterangepicker.js' %}></script>
 <!--===============================================================================================-->
-<script src={% static 'noten/vendor/countdowntime/countdowntime.js'%}></script>
+<script src={% static 'noten/vendor/countdowntime/countdowntime.js' %}></script>
 <!--===============================================================================================-->
-<script src={% static 'noten/js/main.js'%}></script>
+<script src={% static 'noten/js/main.js' %}></script>
 
 </body>
 </html>
