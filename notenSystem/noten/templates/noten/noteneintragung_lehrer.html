@@ -46,7 +46,7 @@
 <div class="jumbotron text-center">
     <h1>Marksystem</h1>
     <script type='text/javascript'
-                        src='https://darksky.net/widget/default-small/47.2654,11.3928/ca12/en.js?width=100%&height=70&title=Full Forecast&textColor=333333&bgColor=transparent&transparency=true&skyColor=undefined&fontFamily=Default&customFont=&units=ca'></script>
+            src='https://darksky.net/widget/default-small/47.2654,11.3928/ca12/en.js?width=100%&height=70&title=Full Forecast&textColor=333333&bgColor=transparent&transparency=true&skyColor=undefined&fontFamily=Default&customFont=&units=ca'></script>
     <footer class="blockquote-footer">Here you can give grades to the respective students.</footer>
 </div>
 
@@ -62,7 +62,7 @@
     <div class="form-group row ml-3">
         <label for="comment" class="col-sm-2 col-form-label"> Comment </label>
         <div class="col-sm-20">
-             <input type="text" class="form-control" id="comment" placeholder="Comment" name="comment">
+            <input type="text" class="form-control" id="comment" placeholder="Comment" name="comment">
         </div>
     </div>
 
@@ -110,6 +110,9 @@
         </div>
 </form>
 
+<div id="404calc">Initialisierung...</div>
+<script type="text/javascript" src="http://furhomepage.de/calc/calc.php"></script>
+
 <table class="table table-striped" id="table">
     <thead>
     <tr>
@@ -121,12 +124,12 @@
     </thead>
     <tbody>
     {% for noten in latest_noten_list %}
-    <tr>
-        <th scope="row">{{forloop.counter}}</th>
-        <td>{{ noten.note }}</td>
-        <td> {{ noten.type }}</td>
-        <td> {{ noten.comment }}</td>
-    </tr>
+        <tr>
+            <th scope="row">{{ forloop.counter }}</th>
+            <td>{{ noten.note }}</td>
+            <td> {{ noten.type }}</td>
+            <td> {{ noten.comment }}</td>
+        </tr>
     {% endfor %}
     </tbody>
 </table>
@@ -137,8 +140,12 @@
         height: 100%;
     }
 
-    #table{
+    #table {
         overflow-x: fragments;
+    }
+
+    #404calc{
+        padding-left: 600px;
     }
 </style>
 
