@@ -5,7 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, reverse
 from django.contrib.auth import logout
 
-from .models import Klasse, Student, Test, Subject, Prüfung, Note, Unterricht, User
+from .models import Klasse, Student, Subject, Note, Unterricht, User
 
 @login_required
 def logout_view(request):

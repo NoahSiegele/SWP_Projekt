@@ -48,19 +48,6 @@ class Note(models.Model):
     class Meta:
         verbose_name_plural = "Noten"
 
-class Test(models.Model):
-    Note = models.ForeignKey(Note, on_delete=models.CASCADE, null=True, blank=True)
-
-    class Meta:
-        verbose_name_plural = "Teste"
-
-class Prüfung(models.Model):
-    Note = models.ForeignKey(Note, on_delete=models.CASCADE, null=True, blank=True)
-
-    class Meta:
-        verbose_name_plural = "Prüfungstyp"
-
-
 
 
 
