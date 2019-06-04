@@ -39,6 +39,7 @@ def startseite_schueler(request):
 @login_required
 def detailseite_lehrer(request, klasse_id):
     unterricht = Unterricht.objects.filter(Teacher=request.user, Klasse__id = klasse_id)
+
     return render(request, 'noten/detailseite_lehrer.html', {'latest_unterricht_list' : unterricht})
 
 @login_required
@@ -71,4 +72,4 @@ def note_eintragen(request, subject_id, student_id):
         n = Note(Unterricht=Unterricht.objects.get(pk=subject_id), Student=student, note=note, type=name, comment=comment)
         n.save()
 
-        return HttpResponseRedirect(reverse('noten:noteneintragung_lehrer', args=(subject_id, student_id, )))
+        return HttpResponseRedirect(reverse('noten:noteneintragung_lehrer', args=(subject_id, student_id)))
